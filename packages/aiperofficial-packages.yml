@@ -1,0 +1,77 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  npm registry search + registry.npmjs.org metadata, PyPI JSON API, and the GitHub API for the
+  community integration repositories; plus a search of aiper.com for a developer/SDK page
+summary: >-
+  Aiper publishes NO first-party client library on any registry. There is no Aiper GitHub
+  organization (github.com/aiper, /aiperofficial, /aiper-official and /AiperTech all 404), no SDK
+  page on aiper.com, and nothing on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist or crates.io under an Aiper name. Every package below is an UNOFFICIAL, community
+  reverse-engineered client for the Aiper mobile-app cloud (apiamerica/apieurope/apiasia.aiper.com
+  plus AWS IoT MQTT). They are recorded because they are the only machine clients that exist for
+  this company, and because their existence is itself the evidence that a real cloud API is running
+  behind the app - but none of them is published, endorsed, or supported by Aiper.
+official_package_count: 0
+community_package_count: 3
+packages:
+- name: homebridge-aiper
+  registry: npm
+  url: https://www.npmjs.com/package/homebridge-aiper
+  official: false
+  version: 1.0.20
+  published: '2026-08-27'
+  language: javascript
+  repository: https://github.com/RichieRockskool/homebridge-aiper
+  description: >-
+    Homebridge plugin exposing supported Aiper pool robot functions to Apple HomeKit. Third-party;
+    talks to Aiper's undocumented app cloud.
+- name: ha-aiper
+  registry: github
+  url: https://github.com/kmich/ha-aiper
+  official: false
+  version: v1.7.0
+  published: '2026-09-11'
+  language: python
+  repository: https://github.com/kmich/ha-aiper
+  note: >-
+    Home Assistant custom integration (HACS-distributed, not on PyPI - version read from the GitHub
+    releases API, which is the only metadata endpoint this distribution has). Reads the Aiper cloud
+    REST API and the AWS IoT MQTT control plane. Its const.py is where the three regional Aiper
+    cloud hosts are named. Explicitly self-described as unofficial and not affiliated with Aiper.
+  description: >-
+    Unofficial Home Assistant integration for Aiper pool cleaners and water monitors.
+- name: ha-aiper
+  registry: github
+  url: https://github.com/dje2912/ha-aiper
+  official: false
+  version: null
+  published: null
+  language: python
+  repository: https://github.com/dje2912/ha-aiper
+  note: >-
+    Second community Home Assistant integration. No tagged release exists (GitHub releases API
+    returns none), so there is no version or publication date to record - checked, nothing to
+    record, not unchecked.
+  description: >-
+    Home Assistant integration for the Aiper pool cleaner. Unofficial.
+registries_checked:
+- registry: npm
+  result: 1 third-party package (homebridge-aiper); no first-party Aiper package
+- registry: pypi
+  result: 404 on aiper, pyaiper, aiper-api, ha-aiper
+- registry: maven-central
+  result: no Aiper coordinates
+- registry: nuget
+  result: no Aiper package
+- registry: rubygems
+  result: no Aiper gem
+- registry: crates.io
+  result: no Aiper crate
+- registry: pkg.go.dev
+  result: no Aiper module
+- registry: github-org
+  result: no Aiper GitHub organization exists (api.github.com/orgs/aiper -> 404)
+pointer_note: >-
+  A `Packages` pointer is wired because the inventory is real. NO `SDKs` pointer is emitted: the
+  sdk_count check asks whether the PROVIDER ships client libraries, and Aiper ships none.

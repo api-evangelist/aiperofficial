@@ -1,17 +1,32 @@
 aid: aiperofficial
-name: Aiperofficial
-description: 'Aiperofficial is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Aiper
+description: >-
+  Aiper is a consumer robotics company that designs and sells cordless robotic pool cleaners,
+  solar-powered pool skimmers and smart yard-care hardware (the Scuba, Surfer/EcoSurfer, Pilot and
+  IrriSense lines), sold in more than 7,000 stores across 50+ countries with a US base in The
+  Woodlands, Texas. Its devices are paired to the Aiper mobile app, which talks to a regional cloud
+  control plane at apiamerica/apieurope/apiasia.aiper.com plus an AWS IoT MQTT layer. That cloud
+  surface is a private first-party app backend: Aiper publishes no developer portal, no API
+  reference, no SDK and no machine-readable contract, and every anonymous request to those hosts is
+  answered with an authentication error. The only clients that speak it are unofficial, community
+  reverse-engineered Home Assistant and Homebridge integrations.
+image: https://d1274tx8ixnt7d.cloudfront.net/20250611/17496348246021749634730323_lQDPJxtgagiJ-NPNAyDNAyCw5tV7PWNRyTEIKTTbrt39AA_800_800.jpg
 url: https://raw.githubusercontent.com/api-evangelist/aiperofficial/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-14'
 modified: '2026-09-14'
 tags:
 - Company
+- Robotics
+- Consumer Electronics
+- Internet of Things
+- Smart Home
+- Home and Garden
+- Hardware
+- Artificial Intelligence
+- Pool Care
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,45 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Packages
+  url: packages/aiperofficial-packages.yml
+- type: LLMsTxt
+  url: llms/aiperofficial-llms.txt
+- type: DomainSecurity
+  url: security/aiperofficial-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aiperofficial
+  url: https://aiper.com/us/home
+- type: Support
+  url: https://aiper.com/us/support
+- type: Blog
+  url: https://poolblog.aiper.com/
+- type: TermsOfService
+  url: https://aiper.com/us/terms-of-service
+- type: PrivacyPolicy
+  url: https://aiper.com/us/privacy-notice
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aiper sells consumer pool-cleaning robots controlled only by its own mobile app - there is no
+    developer portal, API reference, SDK or GitHub organization anywhere, and its real regional
+    app-cloud hosts (apiamerica/apieurope/apiasia.aiper.com) answer EVERY path, /.well-known/*
+    included, with HTTP 200 carrying the JSON body {"code":"401","message":"Your login has
+    expired"}, so there is no anonymous contract surface to read.
+  evidence:
+  - url: https://apiamerica.aiper.com/openapi.json
+    status: 200
+  - url: https://apiamerica.aiper.com/.well-known/api-catalog
+    status: 200
+  - url: https://www.aiper.com/llms.txt
+    status: 200
+  - url: https://aiper.com/.well-known/security.txt
+    status: 404
+  - url: https://api.github.com/orgs/aiper
+    status: 404
+  checked: '2026-09-14'

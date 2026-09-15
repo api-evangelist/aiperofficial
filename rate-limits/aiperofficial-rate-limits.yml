@@ -1,0 +1,26 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  Searched aiper.com and aiper.store for any developer/API documentation; probed the three regional
+  Aiper app-cloud hosts for response headers
+summary: >-
+  No rate limits are published, because no API is published. Aiper has no developer documentation
+  of any kind in which limits could be stated, and the private app-cloud hosts return no
+  rate-limit headers on an anonymous request - every path answers HTTP 200 with a JSON
+  authentication-error envelope and no X-RateLimit-*, RateLimit-* or Retry-After header.
+limit_count: 0
+limits: []
+headers: []
+evidence:
+- url: https://apiamerica.aiper.com/
+  status: 200
+  note: >-
+    Body is {"traceId":"...","code":"401","message":"Your login has expired..."}. No rate-limit
+    headers observed on the anonymous response.
+- url: https://aiper.com/us/support
+  status: 200
+  note: Consumer knowledge base; contains no API reference and therefore no documented limits.
+pointer_note: >-
+  No `RateLimits` pointer is emitted in apis.yml. The agent-readiness rate_limit_signal dimension
+  reads that pointer as evidence the provider signals limits; wiring it to a file recording an
+  absence would score a presence.

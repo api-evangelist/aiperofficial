@@ -1,0 +1,21 @@
+generated: '2026-09-14'
+method: searched
+source: https://aiper.store/us/store
+summary: >-
+  Aiper publishes no API plans, because it publishes no API. The only pricing Aiper publishes is
+  consumer hardware pricing on its e-commerce store (aiper.store) and an AiperCare protection plan
+  for devices - neither is an API product tier, quota, or overage. There is no developer pricing
+  page, no free tier, no metered API billing, and no "contact us for API access" gate.
+plan_count: 0
+plans: []
+evidence:
+- url: https://aiper.store/us/store
+  status: 200
+  note: Consumer product store - robotic pool cleaners and irrigation hardware, not API plans.
+- url: https://aiper.com/us/support
+  status: 200
+  note: Customer support / knowledge base. No developer or API pricing section.
+pointer_note: >-
+  No `Plans` or `Pricing` pointer is emitted in apis.yml. A pricing pointer asserts the provider
+  publishes API pricing; Aiper publishes retail hardware pricing, and pointing the rating at a
+  webstore would be a false claim on their behalf.

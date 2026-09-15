@@ -1,0 +1,184 @@
+generated: '2026-09-14'
+method: probed
+source: live GET of the named /.well-known/ paths on every Aiper host the record knows
+summary: No well-known document is served on any Aiper host. Zero real documents were returned across
+  9 hosts x 5 paths (45 probes). aiper.com and aiper.store answer a hard 404; www.aiper.com and poolblog.aiper.com
+  301 to the marketing site; policy.aiper.com and aiperco.com answer 200 with an HTML/SPA shell for every
+  path (a catch-all, not a document); and the three regional Aiper app-cloud hosts (apiamerica/apieurope/apiasia.aiper.com)
+  answer 200 with a JSON authentication-error envelope for every path, including /.well-known/*. No WellKnown
+  or SecurityTxt pointer is emitted in apis.yml because no path returned a real document.
+pointer_emitted: false
+hosts:
+- host: aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: www.aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+- host: aiper.store
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: poolblog.aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+- host: policy.aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: 200 returned an HTML/SPA shell, not a document - treated as a miss
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: 200 returned an HTML/SPA shell, not a document - treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: 200 returned an HTML/SPA shell, not a document - treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: 200 returned an HTML/SPA shell, not a document - treated as a miss
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: 200 returned an HTML/SPA shell, not a document - treated as a miss
+- host: apiamerica.aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+- host: apieurope.aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+- host: apiasia.aiper.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: 200 carrying an authentication-error JSON envelope from the Aiper app cloud - not a document
+- host: aiperco.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null

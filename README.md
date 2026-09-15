@@ -1,4 +1,4 @@
-# Aiperofficial
+# Aiper
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aiperofficial is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aiperofficial
+Aiper is a consumer robotics company selling cordless robotic pool cleaners, solar pool skimmers and smart yard-care hardware (Scuba, Surfer/EcoSurfer, Pilot, IrriSense). Its devices pair to the Aiper mobile app, which talks to a private regional cloud control plane plus AWS IoT MQTT. Aiper publishes no developer portal, API reference, SDK or machine-readable contract; the only machine clients are unofficial community reverse-engineering projects.
+
+- https://aiper.com/us/home
+- https://aiper.store/us/store
+- https://poolblog.aiper.com/
